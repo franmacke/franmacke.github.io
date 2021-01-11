@@ -50,19 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.pepe').style.animationPlayState = 'paused';
         }
 
-        if (document.querySelector('#third-part').getBoundingClientRect().y - winY < 0){
+        if (document.querySelector('#third-part').getBoundingClientRect().y - y < 0){
             document.querySelectorAll('.project').forEach(element => element.style.animationPlayState = 'running');
 
         } else {
             document.querySelectorAll('.project').forEach(element => element.style.animationPlayState = 'paused');
         }
-
-        if (document.querySelector('.highlight').getBoundingClientRect().y - winY < 0) {
-            document.querySelectorAll('.project').forEach(element => element.style.animationPlayState = 'running');
-        } else {
-            document.querySelectorAll('.project').forEach(element => element.style.animationPlayState = 'paused');
-        }
-
 
     }
 
