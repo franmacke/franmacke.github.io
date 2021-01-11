@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+/* ---------------- SCROLL BAR ---------------------  */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+
+/* Document body */
+
+.container-fluid {
+    padding: 0 !important;
+    margin: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif !important;
+    color: white !important;
+    height: 4000px;
+    
+}
+
+#btn-go-up {
+    position: fixed;
+    visibility: hidden;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+    animation-name: fade_in;
+    animation-duration: 0.6s;
+    animation-play-state: paused;
+}
+
+#btn-go-up:focus {
+    outline: 0;
+}
+
+nav {
+    height: 60px;
+    z-index: 100 !important;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #131417;
+
+}
+
+nav ul {
+    list-style: none;
+    position: relative;
+    height: 60px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    margin: 10px 2.5vw 0 2.5vw;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+nav ul li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    top: 35px;
+    height: 7px;
+    border-radius: 5px;
+    background: white;
+    transition: width 200ms ease ;
+
+}
+
+nav ul li:hover::before {
+    width: 100%;
+}
+
+/* ----------------- FIRST PART OF PAGE --------------------- */
+
+#first-part {
+
+    background: url("img/photo1.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.welcome-message {
+    font-size: 5rem;
+    animation: fade_in 1.3s, move 1.3s;
+}
+
+.welcome-message::after {
+    overflow: hidden;
+    content: '|';
+    position: relative;
+    right: 0;
+    animation-name: alternate;
+    animation-duration: 400ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.page-header {
+    color: #0d153f !important;
+    text-align: center;
+    width: 100%;
+
+}
+/* ----------------- SECOND PART OF PAGE --------------------- */
+
+.info-block {
+
+    background: rgb(90,90,91);
+    background: radial-gradient(circle, rgb(53, 53, 54) 0%, rgba(46,46,46,1) 85%); 
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 60px;
+    text-align: center;
+}
+
+.info-block h1 {
+    font-size: 1.5rem;
+}
+
+.info-block p {
+    font-size: 0.6rem;
+    width: 60%;
+    padding: 3vh 0;
+    margin: auto;
+}
+
+/* ----------------- THIRD PART OF PAGE --------------------- */
+
+#background-1 {
+    background: url("https://i.pinimg.com/originals/7b/fc/52/7bfc529b952511dcf261d3912fb03f4f.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+#background-2 {
+    background: url("https://images.wallpapersden.com/image/download/moon-space-minimal_a2ZpaWWUmZqaraWkpJRmbmdlrWZlbWU.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+
+
+/* #third-part {
+    height: 1500px;
+} */
+
+#third-part > div {
+    margin: 1vh;
+    padding-top: 1vh;
+}
+
+.project {
+    position: relative;
+    background: rgb(39, 39, 39);
+    width: 100%;
+
+    animation-name: fade_in;
+    animation-duration: 1000ms;
+    animation-play-state: paused;
+}
+
+.project > h1 {
+    margin-top: 2vh;
+    font-size: 0.9rem;
+}
+
+.project p {
+    font-size: 0.55rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1vh;
+    grid-row-gap: 1vh;
+    padding: 0 15vw;
+}
+
+.img-project {
+    display: block; 
+    margin: 2vh auto;
+    height: 100px;
+    filter: invert(1);
+    
+
+    /* animation-name: rotation;
+    animation-direction: alternate;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+}
+
+.project-expand {
+    position: relative;
+    bottom: 10px;
+  
+  
+    background-color: transparent;
+    border: 1px solid rgb(109, 107, 107);
+    color: rgb(133, 132, 132);
+    font-size: 0.8rem;
+    width: 150px;
+    height: 40px;
+
+    
+}
+
+.project-expand:hover {
+    border: 1px solid whitesmoke ;
+    color: whitesmoke;
+}
+
+.project-expand:focus {
+    outline: none;
+}
+
+/* ----------------- FOURTH PART OF PAGE --------------------- */
+
+#fourth-part {
+    display: block;
+  
+}
+
+#form-body {
+    display: block;
+    position: relative;
+    margin: 1vh auto;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+#form-body input {
+    color: white;
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    height: 35px;
+    font-size: 0.8rem;
+    margin: 1vh 0;
+    padding-left: 0.5vw;
+}
+
+
+#form-body input:focus {
+    outline: none;
+}
+
+#form-body button {
+    position: relative;
+    display: block;
+    
+}
+
+a img {
+    height: 80px;
+}
+
+.highlight {
+    animation-name: hl;
+    animation-duration: 500ms;
+    animation-play-state: paused;
+}
+
+
+/* ----------------- LANGUAGES CLASSES --------------------- */
+
+.pepe {
+    opacity: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.1fr));
+    justify-content: center;
+    align-items: center;
+    animation-name: fade_in;
+    animation-duration: 1s;
+    animation-play-state: paused;
+    background: rgb(39, 39, 39);
+
+}
+
+.languaje {
+
+    padding-top: 10px;
+    color: black;
+    text-align: center;
+    height: 100px;
+    width: 90%;
+    margin: 7px;
+    justify-items: center;
+    
+    border-radius: 10px;
+}
+
+.languaje:hover {
+    background: rgb(31, 31, 31);
+}
+
+.lang-img {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    height: 50px;
+
+}
+
+.lang-title {
+    display: block;
+    width: 100%;
+    font-size: 0.6rem;
+    color: white;
+    justify-content: center;
+}
+
+
+
+/* ----------------- ANIMATIONS ----------------- */
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    0% {
+        padding-left: 10vw;
+    }
+    100% {
+        padding-left: 0px;
+    }
+}
+
+@keyframes alternate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(720deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes hl {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: black;
+    }
+    100% {
+        background-color: transparent;
+    }
+
+}
+
+
+/* -------------- MEDIA ---------------- */
+

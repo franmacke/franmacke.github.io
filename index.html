@@ -1,10 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hello!</title>
-        <script src="/script.js"></script>
-    </head>
-    <body>
-        <h1>Testing GitHub Pages!</h1>
-    </body>
+<head>
+  <title>My portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="/style.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  <script src="/script.js'"></script>
+
+</head>
+<body>
+  <nav>
+    <ul>
+      <li id="btn-about-me">About Me</li>
+      <li id="btn-projects">Projects</li>
+      <li id="btn-contact">Contact</li>
+      <li id="btn-social">Social</li>
+    </ul>
+  </nav>
+  <button id="btn-go-up">
+    <img style="height: 35px;" src="https://cdn.onlinewebfonts.com/svg/img_118804.png">
+  </button>
+  
+  <div id="start"></div>
+  <div id='page-about-me' class="container-fluid">
+      <div id="first-part">
+          <div class="page-header">
+              <h1 id="welcome-message" class="welcome-message">Hello!</h1>
+          </div>
+      </div>
+      <div id="second-part" class="container info-block">
+          
+              
+          <h1>Welcome to my portflio!</h1>
+          <p>
+              I'm Franco Macke. I live in Argentina. I'm {{ age }} years old and I'm currently
+              looking for a web application develoving job. These are the languages i normally
+              use:
+          </p>
+          <div id="languages" class="container">
+              <div id="section1" class="pepe"></div>
+          </div>
+          
+          <p>
+              Moreover, I'm studying and getting comfortable with other languages such as AngularJS,
+              NodeJS, ReactJS, among others.
+          </p>
+          <p>
+              I have been learning about programming web applications since mid 2019.
+          </p>
+          
+      </div>
+
+      <div id="background-1"></div>
+
+      <div id="third-part" class="container info-block">
+          <h1>Some projects i have done:</h1>
+
+          <div class="container grid">
+              <div class="project">
+                  <h1>RGB led arduino controller</h1>
+                  <img class="img-project" src="https://img.icons8.com/fluent/96/000000/rgb-circle-1.png"/>
+                  <p>
+                      An ESP8266 arduino wifi for the server side and backend, and HTML, CSS, JS for the frontend.
+                      
+                  </p>
+                  <button class="project-expand">Expand</button>
+              </div>
+              <div class="project">
+                  <h1>Tic-Tac-Toe AI</h1>
+                  <img class="img-project" src="https://img.icons8.com/wired/64/000000/artificial-intelligence.png"/>
+                  <p>
+                      Using the minimax algorithm, I made an unbeatable Tic-Tac-Toe opponent!
+                      
+                  </p>
+                  <button class="project-expand">Expand</button>
+              </div>
+              <div class="project">
+                  <h1>Bitcoin price checker</h1>
+                  <img class="img-project" src="https://img.icons8.com/wired/64/000000/bitcoin.png"/>
+                  <p>
+                      With the selenium library, I wrote a program to check the bitcoin price!
+                      
+                  </p>
+                  <button class="project-expand">Expand</button>
+              </div>
+              <div class="project">
+                  <h1>3D Printing</h1>
+                  <img class="img-project" src="https://img.icons8.com/wired/64/000000/3d-printer.png"/>
+                  <p>
+                      I also do 3D prints! I use SolidWorks for modeling and Simplify3D to slice.
+                      
+                  </p>
+                  <button class="project-expand">Expand</button>
+              </div>
+          </div>
+      </div>
+      <div id="background-2"></div>
+      <div id="fourth-part" class="container info-block">
+          <h1>Contact me!</h1>
+          <p>You can send me a message:</p>
+          <form method="POST" id="form-body">
+              {{ crsf_token }}
+              <input type="text" name="name" placeholder="Full name" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="text" name="org" placeholder="Organization (Optional)">
+              <input type="text" name="message" placeholder="Message" required>
+          </form>
+          <button class="project-expand" >Send</button>
+
+          <div class="highlight">
+              <p>
+                  You can contact me on the following social media:
+              </p>
+              <a href="#"><img src="https://img.icons8.com/officel/80/000000/linkedin.png"/></a>
+              <a href="#"><img src="https://img.icons8.com/fluent/96/000000/instagram-new.png"/></a>
+              <a href="#"><img src="https://img.icons8.com/officel/80/000000/whatsapp.png"/></a>
+              
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+</body>
 </html>
