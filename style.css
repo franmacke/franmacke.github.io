@@ -420,3 +420,34 @@ a img {
 
 /* -------------- MEDIA ---------------- */
 
+@media screen and (max-width: 900px) {
+    * {
+        font-size: 5vw;
+    }
+    nav ul li {
+        font-size: 3vw;
+    }
+
+    nav {
+        height: 10vw;
+    }
+
+    .pepe {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .lang-img {
+        height: 10vw;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 7vw;
+    }
+
+    .project-expand {
+        width: 90%;
+        height: 1.4rem;
+    }
+}
