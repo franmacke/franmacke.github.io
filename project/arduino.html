@@ -1,0 +1,599 @@
+<html>
+<head>
+     <meta name='viewport' content='width=device-width, initial-scale=1'/>
+     <meta name="theme-color" content="#B233FF"/>
+
+     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+
+
+     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               -webkit-box-sizing: border-box;
+               box-sizing: border-box;
+               }
+
+               body {
+               background-image: linear-gradient(black, rgb(82, 37, 72));
+               font-family: Pacifico;
+               }
+
+               h2 {
+               
+               font-size: 1.5em;
+               width: 40%;
+               text-align: left;
+               margin: 10px;
+               border: 0px;
+               font-weight: bold;
+               }
+
+               h3 {
+
+               font-size: 1px;
+               width: 40%;
+               text-align: left;
+               margin: 10px;
+               border: 0px;
+               font-weight: bold;
+               }
+
+               h4 {
+
+               font-size: 40px;
+
+               }
+
+               .header1 {
+
+               font-size: 45px;
+               position: relative;
+               padding-bottom: 55px;
+               padding-left: 5px;
+               height: 3px;
+               width: 100%;
+               border-radius: 10px;
+               color: white;   
+               }
+
+               .header2 {
+               
+               align-items: center;
+               background: #000;       
+               text-align: center;
+               position: relative;
+               color: white;
+               background: linear-gradient(70deg,#47cf73,#0ebeff,#47cf73);     
+               }
+
+               .tabla {
+               
+               position: relative;
+
+               }
+
+               .tarjeta {
+               
+               display: flex;
+               position: relative;
+               background: #0a0a0c;
+               color: #fff;
+               text-align: center;
+               border-radius: 15px;
+               }
+
+               .tarjeta2 {
+               width: 100%;
+               display: flex;
+               position: relative;
+               background: #0a0a0c;
+               color: #fff;
+               text-align: center;
+               border-radius: 15px;
+               opacity: 0.6;
+               transition: 0.3s;
+               
+               }
+                    
+               .tarjeta2:hover{
+               opacity: 1;
+               
+               }
+
+
+               .divmain {
+
+               background: linear-gradient(70deg,#47cf73,#0ebeff,#47cf73);    
+               padding-top: 5px; 
+               width: 100%;
+               height: 3px; 
+
+               }
+
+               .mein {
+               position: relative;
+               display: grid;
+               grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+               grid-gap: 1rem;
+               margin: auto;
+               }
+               .boton {
+
+               width: 100%;
+               background: transparent;
+               border: none;
+               outline: none;
+               }
+
+               .mein2 {
+
+               width: 100%;
+               display: grid;
+               grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+               grid-column-gap: 10px;
+               grid-row-gap: 10px;
+               margin: auto;
+               }
+
+
+               .anim {
+
+               background: red;
+               position: relative;
+               animation: mymove 5s infinite;
+               }
+
+
+               /* keyframes  */
+
+               @keyframes mymove {
+
+               0%   {background-color: black}
+               25%  {background-color: rgba(236, 139, 11, 0.932)}
+               50%  {background-color: rgb(47, 219, 24)}
+               75%  {background-color: #1281db}
+               100% {background-color: rgb(167, 22, 196)}
+
+               }
+
+               @keyframes fadein {
+
+               0%   {background-color: #0a0a0c; color: white;}
+               100% {background-color: white; color: black}
+
+               }
+
+
+               /* sliders */
+
+               .slidecontainer {
+
+               padding-top: 2px;
+               width: 90%;
+               margin: auto;
+               align-self: center;
+
+               }
+
+               .range {
+               -webkit-appearance: none;
+               -moz-appearance: none;
+               position: relative;
+               left: 50%;
+               
+               width: 100%;
+               margin-top: 10px;
+               transform: translate(-50%, -50%);
+               }
+
+               input[type=range]::-webkit-slider-runnable-track {
+               -webkit-appearance: none;
+               background: rgba(59,173,227,1);
+               background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+               background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+               height: 2px;
+               }
+
+               input[type=range]:focus {
+               outline: none;
+               }
+
+               input[type=range]::-moz-range-track {
+               -moz-appearance: none;
+               background: rgba(59,173,227,1);
+               background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+               background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+               filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+               height: 2px;
+               }
+
+               input[type=range]::-webkit-slider-thumb {
+               -webkit-appearance: none;
+               border: 2px solid;
+               border-radius: 50%;
+               height: 25px;
+               width: 25px;
+               max-width: 80px;
+               position: relative;
+               bottom: 11px;
+               background-color: #1d1c25;
+               cursor: -webkit-grab;
+
+               -webkit-transition: border 1000ms ease;
+               transition: border 1000ms ease;
+               }
+
+               input[type=range]::-moz-range-thumb {
+               -moz-appearance: none;
+               border: 2px solid;
+               border-radius: 50%;
+               height: 25px;
+               width: 25px;
+               max-width: 80px;
+               position: relative;
+               bottom: 11px;
+               background-color: #1d1c25;
+               cursor: -moz-grab;
+               -moz-transition: border 1000ms ease;
+               transition: border 1000ms ease;
+               }
+
+
+
+               .range.blue::-webkit-slider-thumb {
+               border-color: rgb(59,173,227);
+               }
+
+               .range.ltpurple::-webkit-slider-thumb {
+               border-color: rgb(87,111,230);
+               }
+
+               .range.purple::-webkit-slider-thumb {
+               border-color: rgb(152,68,183);
+               }
+
+               .range.pink::-webkit-slider-thumb {
+               border-color: rgb(255,53,127);
+               }
+
+               .range.blue::-moz-range-thumb {
+               border-color: rgb(59,173,227);
+               }
+
+               .range.ltpurple::-moz-range-thumb {
+               border-color: rgb(87,111,230);
+               }
+
+               .range.purple::-moz-range-thumb {
+               border-color: rgb(152,68,183);
+               }
+
+               .range.pink::-moz-range-thumb {
+               border-color: rgb(255,53,127);
+               }
+
+               input[type=range]::-webkit-slider-thumb:active {
+               cursor: -webkit-grabbing;
+               }
+
+               input[type=range]::-moz-range-thumb:active {
+               cursor: -moz-grabbing;
+               }
+                         
+               .fotocomando {
+
+               height: 100px;
+               width: 100px;
+               border-radius: 15px;
+               background: linear-gradient(70deg,#1281db,rgb(167, 22, 196));  
+               
+               
+               }
+
+               .fotocomando2 {
+
+               left: 0px;
+               position: relative;
+               align-self: left;
+               height: 70px;
+               width: 70px;
+               border-radius: 15px;
+               background: linear-gradient(70deg,#1281db,rgb(167, 22, 196));  
+
+               }
+
+               .switch {
+               position: relative;
+               display: inline-block;
+               align-self: center;
+               top: 25px;
+               width: 60px;
+               height: 34px;
+               }
+
+               /* Hide default HTML checkbox */
+               .switch input {
+               opacity: 0;
+               width: 0;
+               height: 0;
+
+               }
+
+               /* The slider */
+               .slider1 {
+               position: absolute;
+               cursor: pointer;
+
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-color: #ccc;
+               -webkit-transition: .4s;
+               transition: .4s;
+               }
+
+               .slider1:before {
+               position: absolute;
+               content: "";
+               height: 26px;
+               width: 26px;
+               left: 4px;
+               bottom: 4px;
+               background-color: white;
+               -webkit-transition: .4s;
+               transition: .4s;
+               }
+
+               input:checked + .slider1 {
+               background-color: #2196F3;
+               }
+
+               input:focus + .slider1 {
+               box-shadow: 0 0 1px #2196F3;    
+               }
+
+               input:checked + .slider1:before {
+               -webkit-transform: translateX(26px);
+               -ms-transform: translateX(26px);
+               transform: translateX(26px);
+               }
+
+               /* Rounded sliders */
+               .slider1.round {
+               border-radius: 34px;
+               }
+
+               .slider1.round:before {
+               border-radius: 50%;
+               }
+
+
+               @media screen and (device-aspect-ratio: 9/16), screen and (device-aspect-ratio: 10/16){
+
+                    h1  {
+                         align-self: center;
+                         /* The width is 100%, when the viewport is 800px or smaller */
+                    }
+
+                    h4 {
+
+                         width: 100%;
+                    }
+                    .mein{
+
+                         grid-gap: 1px; 
+                         
+
+                    }
+
+
+               }
+
+          </style>
+     <title>LUCES!</title>
+</head>
+<body>
+     <header class='header2'>
+          <h4>EFECTOS</h4>
+     </header>
+     <div class='container'>
+          <h2 class='header1'>Comandos</h2>
+          <div class='mein'>
+               <button type="button submit" class="boton" name="P" id="P0" onclick="efectoJson(this)">
+                    <h1 class='tarjeta2'> 
+                         <img src="https://cdn2.iconfinder.com/data/icons/android-application/32/Shut_Down-512.png" class="fotocomando">
+                         <div style="width: 50%;align-self: left;">
+                              <h2 class="h2">Power</h2>
+                         </div>          
+                    </h1>
+               </button> 
+               <form>
+                    <h1 class='tarjeta'> 
+                         <img src="https://cdn2.iconfinder.com/data/icons/responsive-user-interface-4/18/226-512.png" class="fotocomando">
+                         <div style="width: 100%;">
+                              <h2 class="h2">Brillo</h2>
+                              <form action="/" method="POST">
+                                   <div class='slidecontainer'>
+                                        <input type="range" min="0" max="255" value="100" class="range blue" name="B" onchange="efectoJson(this)">
+                                   </div>
+                              </form>  
+                         </div>        
+                    </h1>
+               </form>
+               <form >
+                    <h1 class='tarjeta'> 
+                    
+                         <img src="https://icons-for-free.com/iconfiles/png/512/performance+speed+icon-1320183237988780008.png" class="fotocomando">
+                         <div style="width: 100%;">
+                              <h2 class="h2">Velocidad</h2>
+                              <div class='slidecontainer'>
+                                   <input type="range" min="0" max="255" value="100" class="range blue" name="V" onchange="efectoJson(this)">
+                              </div>
+                         </div>
+                    </h1>
+               </form>   
+               <button type="button submit" class="boton" name="R" id="R" onclick="efectoJson(this)">
+                    <h1 class='tarjeta2'> 
+                         <img src="https://static.thenounproject.com/png/1766496-200.png" class="fotocomando">
+                         <div style="width: 50%;align-self: left;">
+                              <h2 class="h2">Random</h2>
+                         </div>              
+                    </h1>        
+               </button> 
+               
+               <button type="button" class="boton" data-toggle="modal" name='rgb' data-target=".bd-example-modal-lg">
+                    <h1 class='tarjeta2'> 
+                         <img src="https://img.icons8.com/ios-filled/100/000000/sorting-options.png" class="fotocomando">
+                         <div style="width: 50%;align-self: left;">
+                              <h2 class="h2">RGB</h2>
+                         </div>              
+                    </h1>        
+               </button> 
+          </div>
+          <div class="divmain"></div>
+          <h2 class='header1'>Efectos</h2>
+          <div class='mein2'></div>
+     </div>
+     <div class="modal fade bd-example-modal-lg" id="rgb" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: transparent; ">
+                    <form>
+                         <h1 class='tarjeta'> 
+                         
+                              <img src="https://img.icons8.com/material-outlined/48/000000/slider-control.png" class="fotocomando">
+                              <div style="width: 100%;">
+                                   <h2 class="h2">Red</h2>
+                                   <div class='slidecontainer'>
+                                        <input type="range" min="0" max="255" value="100" class="range blue" name="r" onchange="efectoJson(this)">
+                                   </div>
+                              </div>
+                         </h1>
+                    </form>   
+                   
+                   <form>
+                    <h1 class='tarjeta'> 
+                    
+                         <img src="https://img.icons8.com/material-outlined/48/000000/slider-control.png" class="fotocomando">
+                         <div style="width: 100%;">
+                              <h2 class="h2">Green</h2>
+                              <div class='slidecontainer'>
+                                   <input type="range" min="0" max="255" value="100" class="range blue" name="g" onchange="efectoJson(this)">
+                              </div>
+                         </div>
+                    </h1>
+               </form> 
+               <form >
+                    <h1 class='tarjeta'> 
+                    
+                         <img src="https://img.icons8.com/material-outlined/48/000000/slider-control.png" class="fotocomando">
+                         <div style="width: 100%;">
+                              <h2 class="h2">Blue</h2>
+                              <div class='slidecontainer'>
+                                   <input type="range" min="0" max="255" value="100" class="range blue" name="b" onchange="efectoJson(this)">
+                              </div>
+                         </div>
+                    </h1>
+               </form>   
+              
+              </div>
+            </div>
+          </div>
+     </div>
+     <script>
+          
+          var efecto = [{name:'Arcoiris', id: 'C1'},
+              {name:'Lineas1', id: 'C2'},
+              {name:'Lineas2', id: 'C3'},
+              {name:'Nube', id: 'C4'},
+              {name:'Party',id: 'C5'},
+              {name:'Blanco',id: 'C6'},
+              {name:'Rojo',id: 'C7'},
+              {name:'Azul',id: 'C8'},
+              {name:'Verde',id: 'C9'},
+              {name:'Cool',id: 'C10'},
+              {name:'Sunset',id: 'C11'},
+              {name:'Juggle',id: 'C12'},
+              {name:'Rainbow',id: 'C13'},
+              {name:'BPM',id: 'C14'},
+              {name:'Sunset',id: 'C15'}
+             ];
+          
+          var rgb = [{name: "Rojo", id: "r"},
+                     {name: "Verde", id:"g"},     
+                     {name: "Azul", id: "b"}];
+     
+          var funciones = [{name:'Power', id:'P0', img:'https://cdn2.iconfinder.com/data/icons/android-application/32/Shut_Down-512.png'},
+                         {name:'Brillo', id:'B', img:'https://cdn2.iconfinder.com/data/icons/responsive-user-interface-4/18/226-512.png'},
+                         {name:'Velocidad', id:'V', img:'https://icons-for-free.com/iconfiles/png/512/performance+speed+icon-1320183237988780008.png'},
+                         {name:'Random', id:'R', img:'https://static.thenounproject.com/png/1766496-200.png'}
+                         ];
+
+
+          document.addEventListener("DOMContentLoaded", function() {
+
+               crearBotones();
+
+               let w = window.innerWidth;
+
+               document.querySelector('.mein').setAttribute('grid-template-columns',`repeat(auto-fill,minmax(${w}px,1fr));`);
+               document.querySelector('.mein2').setAttribute('grid-template-columns',`repeat(auto-fill,minmax(${w}px,1fr));`);
+          });
+
+          function crearBotones () {
+
+               for (let element of efecto) {
+
+                    
+
+                    let btn = document.createElement('button');
+                    let div1 = document.createElement('div');
+                    let div2 = document.createElement('div');
+                    let img = document.createElement('img');
+                    let h3 = document.createElement('h3');
+
+                    btn.setAttribute('name', element.id);
+                    btn.setAttribute('type','button submit');
+                    btn.classList.add('boton');
+
+                    div1.classList.add('tarjeta2');
+
+                    img.classList.add('fotocomando2');
+                    img.setAttribute('src','https://img.icons8.com/pastel-glyph/64/000000/light--v1.png');
+                    
+                    h3.classList.add('h3');
+                    h3.innerHTML = element.name;
+                    
+                    div2.style.width = '50%';
+                    div2.setAttribute('name','boton');
+
+                    div2.appendChild(h3);
+                    div1.appendChild(img);
+                    div1.appendChild(div2);
+                    btn.appendChild(div1);
+                    
+                    document.querySelector('.mein2').append(btn);
+               
+               }        
+
+               console.table(efecto);
+          }
+
+     </script>
+</body>
+</html>   
