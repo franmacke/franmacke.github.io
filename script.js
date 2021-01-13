@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // listen for resizes
 
-    if (!winY > winX) {
-        window.addEventListener('resize', function (){
-            winX = window.innerWidth;
-            winY = window.innerHeight;
-            document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
-            document.querySelector('.page-header').style.height = `${winY}px`;
-        })
-    }
+    
+    window.addEventListener('resize', function (){
+        winX = window.innerWidth;
+        winY = window.innerHeight;
+        document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
+        document.querySelector('.page-header').style.height = `${winY}px`;
+    })
+    
     // navigation (listeners)
 
     document.querySelector('#btn-about-me').addEventListener('click', function(){
