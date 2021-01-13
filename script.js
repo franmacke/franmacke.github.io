@@ -1,5 +1,3 @@
-// import {default as languages} from 'projects.js'
-
 var winX = window.innerWidth;
 var winY = window.innerHeight;
 
@@ -13,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // listen for resizes
 
-    window.addEventListener('resize', function (){
-        winX = window.innerWidth;
-        winY = window.innerHeight;
-        document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
-        document.querySelector('.page-header').style.height = `${winY}px`;
-        btn_go_up();
-    })
-    
+    if (!winY > winX) {
+        window.addEventListener('resize', function (){
+            winX = window.innerWidth;
+            winY = window.innerHeight;
+            document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
+            document.querySelector('.page-header').style.height = `${winY}px`;
+        })
+    }
     // navigation (listeners)
 
     document.querySelector('#btn-about-me').addEventListener('click', function(){
@@ -32,10 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#btn-contact').addEventListener('click', function(){
         document.querySelector('#fourth-part').scrollIntoView({behavior: "smooth"});
     })
-    document.querySelector('#btn-go-up').addEventListener('click', () => {
-        document.querySelector('body').scrollIntoView({behavior: "smooth", block: "start"})
-    });
-    
+    if(document.querySelector('.nav-mobile')) {
+        document.querySelector('.nav-mobile').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('nav-toggle')
+            .then(document.querySelectorAll('.nav-links li').forEach(element => {
+                element.classList.toggle('toggle-text');
+            }));
+        })
+    }
    
     
     // scrolling through page
@@ -87,19 +89,6 @@ function render_diapos() {
         
     }
 
-}
-
-function btn_go_up () {
-    if (winY <= window.scrollY){
-        document.querySelector('#btn-go-up').style.visibility = 'visible';
-    
-        document.querySelector('#btn-go-up').style.marginTop = `${winY-winY*0.1}px`;
-        document.querySelector('#btn-go-up').style.marginLeft = `${winX-winX*0.1}px`;
-        document.querySelector('#btn-go-up').style.animationPlayState = 'running';
-    } else {
-        document.querySelector('#btn-go-up').style.visibility = 'hidden';
-    
-    }
 }
 
 const languages = [

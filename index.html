@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,16 +16,19 @@
 </head>
 <body>
   <nav>
-    <ul>
-      <li id="btn-about-me">About Me</li>
-      <li id="btn-projects">Projects</li>
-      <li id="btn-contact">Contact</li>
-      <li id="btn-social">Social</li>
+    <div class="logo">franmacke</div>
+    <ul class="nav-links">
+        <li id="btn-about-me">About Me</li>
+        <li id="btn-projects">Projects</li>
+        <li id="btn-contact">Contact</li>
+        <li id="btn-social">Social</li>
     </ul>
+    <div class="nav-mobile">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
   </nav>
-  <button id="btn-go-up">
-    <img style="height: 35px;" src="https://cdn.onlinewebfonts.com/svg/img_118804.png">
-  </button>
   
   <div id="start"></div>
   <div id='page-about-me' class="container-fluid">
