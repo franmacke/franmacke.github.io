@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.page-header').style.height = `${winY}px`;
 
     // listen for resizes
+    
 
     
     window.addEventListener('resize', function (){
@@ -42,7 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // scrolling through page
 
+    let beforeScroll = window.pageYOffset;
+    
     window.onscroll = () => {
+        let afterScroll = window.pageYOffset;
+
+        // hide nav on scroll 
+        
+        if (beforeScroll > afterScroll) {
+            document.querySelector('nav').style.top = '0px';
+            beforeScroll = window.pageYOffset;
+        } else {
+            document.querySelector('nav').style.top = '-60px';
+            beforeScroll = window.pageYOffset;
+        }
+
         let y = window.scrollY;
         
         if (y >= winY/2) {

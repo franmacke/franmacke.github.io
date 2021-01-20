@@ -76,13 +76,15 @@ body {
 
 nav {
     z-index: 100 !important;
-    min-height: 7vh;
+    height: 60px;
     position: fixed;
     top: 0px;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background: #131417;
+    align-items: center;
+
+    transition: top 100ms ease;
 }
 
 nav ul {
@@ -138,7 +140,7 @@ nav ul li:hover::before {
 /* ----------------- FIRST PART OF PAGE --------------------- */
 
 #first-part {
-
+    
     background: url("img/photo1.png");
     background-attachment: fixed;
     background-position: center;
