@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // scrolling through page
-
+    console.log('hola');
     let beforeScroll = window.pageYOffset;
     
     window.onscroll = () => {

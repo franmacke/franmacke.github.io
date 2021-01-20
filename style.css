@@ -255,6 +255,7 @@ nav ul li:hover::before {
 }
 
 .row-number {
+    padding-top: 5px;
     width: 30px;
     background-color: rgb(31, 30, 30);
 }
@@ -263,6 +264,9 @@ nav ul li:hover::before {
     font-size: 0.45rem;
     color: rgb(180, 175, 175);
     
+}
+.code {
+    padding-top: 5px;
 }
 
 .code li{
@@ -542,33 +546,48 @@ a img {
     }
 
     .info-block {
+        
         position: relative;
         flex-direction: column;
         align-items: center;
         background: #0d153f;
         background-color: #0d153f;
+        box-shadow: none;
+        height: 80vh;
+    }
+
+    .codes {
+        flex-direction: row;
+        width: 100%;
+        
     }
     .desc {
-        position: absolute;
         top: 1vh;
         width: 100%;
+        box-shadow: none;
+
     }
 
     .code-editor {
-        width: 50%;
-        position: absolute;
-        bottom: 2vh;
+        width: 45%;
+        box-shadow: none;
+    }
+
+    .code-editor li {
+        font-size: 1.3vw;
     }
 
     
 }
 
 
-@media screen and (max-width: 768px) and (min-height: 500px) {
+@media screen and (max-width: 768px){
     * {
         font-size: 5vw;
     }
     
+
+    /* --------------- NAVBAR ------------- */
     .nav-mobile div {
         display: block;
         margin-right: 20px;
@@ -614,11 +633,27 @@ a img {
 
     .info-block {
         height: 60vh;
+        box-shadow: none;
     }
 
-    .pepe {
-        grid-template-columns: 1fr 1fr;
+    .info-block h1 {
+        font-size: 10vw;
+    }
 
+    .info-block p {
+        font-size: 6vw;
+        width: 80%;
+    }
+
+    .desc {
+        padding-top: 2vh;
+        width: 100%;
+        height: 80%;
+        box-shadow: none;
+    }
+
+    .row-number {
+        width: 10px;
     }
 
     .lang-img {
