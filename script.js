@@ -33,13 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     if(document.querySelector('.nav-mobile')) {
         document.querySelector('.nav-mobile').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('nav-toggle')
-            .then(document.querySelectorAll('.nav-links li').forEach(element => {
-                element.classList.toggle('toggle-text');
-            }));
+            document.querySelector('.nav-links').classList.toggle('nav-toggle');
+            document.querySelectorAll('.nav-links li').forEach(element => {
+                element.addEventListener('click', () => {
+                    document.querySelector('.nav-links').classList.toggle('nav-toggle');
+                });
+            });
+
+
         })
     }
-   
     
     // scrolling through page
 
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let afterScroll = window.pageYOffset;
 
         // hide nav on scroll 
-        
+
         if (beforeScroll > afterScroll) {
             document.querySelector('nav').style.top = '0px';
             beforeScroll = window.pageYOffset;
@@ -60,12 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let y = window.scrollY;
         
-        if (y >= winY/2) {
-            document.querySelector('.pepe').style.animationPlayState = 'running';
+        // if (y >= winY/2) {
+        //     document.querySelector('.pepe').style.animationPlayState = 'running';
             
-        } else {
-            document.querySelector('.pepe').style.animationPlayState = 'paused';
-        }
+        // } else {
+        //     document.querySelector('.pepe').style.animationPlayState = 'paused';
+        // }
 
         if (document.querySelector('#third-part').getBoundingClientRect().y - y < 0){
             document.querySelectorAll('.project').forEach(element => element.style.animationPlayState = 'running');
@@ -100,7 +103,7 @@ function render_diapos() {
         div.appendChild(title);
 
         
-        document.querySelector('#section1').appendChild(div);
+        // document.querySelector('#section1').appendChild(div);
         
     }
 
