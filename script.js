@@ -34,14 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if(document.querySelector('.nav-mobile')) {
         document.querySelector('.nav-mobile').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('nav-toggle');
-            document.querySelectorAll('.nav-links li').forEach(element => {
-                element.addEventListener('click', () => {
-                    document.querySelector('.nav-links').classList.toggle('nav-toggle');
-                });
-            });
-
-
         })
+        document.querySelectorAll('.nav-links li').forEach(element => {
+            element.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('nav-toggle');
+            });
+        });
     }
     
     // scrolling through page
