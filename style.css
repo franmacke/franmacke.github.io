@@ -49,23 +49,7 @@ body {
     color: white !important;
 }
 
-#btn-go-up {
-    position: fixed;
-    visibility: hidden;
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    
-    animation-name: fade_in;
-    animation-duration: 0.6s;
-    animation-play-state: paused;
-}
 
-#btn-go-up:focus {
-    outline: 0;
-}
 
 /* --------------- NAVIGATION ------------- */
 
@@ -173,6 +157,13 @@ nav ul li:hover::before {
     color: #0d153f !important;
     text-align: center;
     width: 100%;
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
 
 }
 /* ----------------- SECOND PART OF PAGE --------------------- */
@@ -661,7 +652,7 @@ a img {
     }
 
     /* nav end  */
-
+    
     .page-header h1{
         font-size: 20vw;
     }
@@ -674,17 +665,21 @@ a img {
     }
 
     .info-block h1 {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 
     .info-block p {
-        font-size: 4vw;
+        font-size: 6vw;
         width: 80%;
     }
 
     .codes {
         justify-content: flex-start;
         align-items: flex-start;
+    }
+
+    .code-editor {
+        font-size: 5vw;
     }
     .desc {
         padding-top: 2vh;
@@ -707,8 +702,25 @@ a img {
     }
 
     .project-expand {
+        display: none;
         width: 90%;
         height: 1.4rem;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project h1 {
+        width: 100%;
+    }
+
+    .project p {
+        width: 100%;
+    }
+
+    .project img {
+        display: block;
     }
 }
 

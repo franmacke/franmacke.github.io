@@ -13,12 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     
-    window.addEventListener('resize', function (){
-        winX = window.innerWidth;
-        winY = window.innerHeight;
-        document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
-        document.querySelector('.page-header').style.height = `${winY}px`;
-    })
+    // window.addEventListener('resize', function (){
+    //     winX = window.innerWidth;
+    //     winY = window.innerHeight;
+
+    //     if (winX >= 768){
+
+    //         document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
+    //     }
+    //     // document.querySelector('.page-header').style.height = `${winY}px`;
+    // })
     
     // navigation (listeners)
 
