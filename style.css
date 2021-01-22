@@ -640,6 +640,9 @@ a img {
 
     /* nav end  */
     
+    .pepe { 
+        flex-wrap: nowrap ;
+    }
     .page-header h1{
         font-size: 20vw;
     }
@@ -662,6 +665,10 @@ a img {
 
     .codes {
         justify-content: center;
+    }
+
+    .codes p {
+        width: 100%;
     }
 
     .code-editor li {
@@ -688,6 +695,10 @@ a img {
         padding: 0 7vw;
     }
 
+    #third-part > h1 {
+        font-size: 10vw;
+    }
+
     .project-expand {
         display: none;
         width: 90%;
@@ -700,16 +711,18 @@ a img {
 
     .project h1 {
         width: 100%;
+        font-size: 5vw;
     }
 
-    .project p {
-        width: 100%;
-    }
 
     .project img {
         display: block;
     }
     .pepe {
+        width: 100%;
+    }
+
+    .highlight p {
         width: 100%;
     }
 }
