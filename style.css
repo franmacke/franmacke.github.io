@@ -200,6 +200,7 @@ nav ul li:hover::before {
 
 }
 
+
 .info-block h1 {
     
     background-color: #f3ec78;
@@ -228,6 +229,7 @@ nav ul li:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     width: 40%;
     height: 100%;
 
@@ -278,20 +280,11 @@ nav ul li:hover::before {
     height: 400px;
 }
 
-#background-2 {
-    background: url("https://images.wallpapersden.com/image/download/moon-space-minimal_a2ZpaWWUmZqaraWkpJRmbmdlrWZlbWU.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
+#third-part > h1 {
+    font-size: 3.5vw;
 }
 
 
-
-#third-part > h1 {
-    font-size: 4vw;
-} 
 #third-part > div {
     margin: 1vh;
     padding-top: 1vh;
@@ -316,6 +309,7 @@ nav ul li:hover::before {
 
 .project p {
     font-size: 0.55rem;
+    width: 80%;
 }
 
 .grid {
@@ -361,7 +355,7 @@ nav ul li:hover::before {
     height: 40px;
 }
 .project-expand a {
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
 
@@ -426,18 +420,11 @@ a img {
 /* ----------------- LANGUAGES CLASSES --------------------- */
 
 .pepe {
-    opacity: 1;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 0.1fr));
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation-name: fade_in;
-    animation-duration: 1s;
-    animation-play-state: paused;
-    background: rgb(39, 39, 39);
-    flex: 2;
-    
+    width: 100%;
 }
 
 #languages {
@@ -674,8 +661,7 @@ a img {
     }
 
     .codes {
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
     }
 
     .code-editor li {
@@ -722,6 +708,9 @@ a img {
 
     .project img {
         display: block;
+    }
+    .pepe {
+        width: 100%;
     }
 }
 

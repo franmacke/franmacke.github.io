@@ -6,25 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // setting client view
     window.scrollTo(0,0);
-    document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
-    document.querySelector('.page-header').style.height = `${winY}px`;
-
+    
     // listen for resizes
-    
-
-    
-    // window.addEventListener('resize', function (){
-    //     winX = window.innerWidth;
-    //     winY = window.innerHeight;
-
-    //     if (winX >= 768){
-
-    //         document.querySelector('#welcome-message').style.paddingTop = `${winY/2 - 85}px`;
-    //     }
-    //     // document.querySelector('.page-header').style.height = `${winY}px`;
-    // })
-    
-    // navigation (listeners)
 
     document.querySelector('#btn-about-me').addEventListener('click', function(){
         document.querySelector('#second-part').scrollIntoView({behavior: "smooth"});
@@ -49,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // scrolling through page
     console.log('hola');
     let beforeScroll = window.pageYOffset;
+
+    let section = 0;
+    let divisions = document.querySelectorAll('.info-block');
+    console.table(divisions);
+    console.log(divisions[section])
     
     window.onscroll = () => {
         let afterScroll = window.pageYOffset;
@@ -58,19 +46,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (beforeScroll > afterScroll) {
             document.querySelector('nav').style.top = '0px';
             beforeScroll = window.pageYOffset;
+            
         } else {
             document.querySelector('nav').style.top = '-60px';
             beforeScroll = window.pageYOffset;
+
         }
 
         let y = window.scrollY;
         
-        // if (y >= winY/2) {
-        //     document.querySelector('.pepe').style.animationPlayState = 'running';
-            
-        // } else {
-        //     document.querySelector('.pepe').style.animationPlayState = 'paused';
-        // }
 
         if (document.querySelector('#third-part').getBoundingClientRect().y - y < 0){
             document.querySelectorAll('.project').forEach(element => element.style.animationPlayState = 'running');
@@ -105,7 +89,7 @@ function render_diapos() {
         div.appendChild(title);
 
         
-        // document.querySelector('#section1').appendChild(div);
+        document.querySelector('#section1').appendChild(div);
         
     }
 
