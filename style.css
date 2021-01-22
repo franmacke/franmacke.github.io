@@ -559,8 +559,8 @@ a img {
         height: auto;
     }
 
-    .info-block h1 {
-        font-size: 8vw;
+    .info-block > h1 {
+        font-size: 10vw;
     }
 
     .info-block p {
@@ -678,9 +678,10 @@ a img {
         align-items: flex-start;
     }
 
-    .code-editor {
-        font-size: 5vw;
+    .code-editor li {
+        font-size: 3vw;
     }
+
     .desc {
         padding-top: 2vh;
         width: 100%;
