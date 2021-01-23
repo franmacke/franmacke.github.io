@@ -550,8 +550,8 @@ a img {
         font-size: 10vw;
     }
 
-    .info-block p {
-        font-size: 4vw;
+    .info-block p, .project p {
+        font-size: 3vw;
         width: 80%;
     }
     .codes {
@@ -597,12 +597,9 @@ a img {
         display: block;
         margin-right: 20px;
     }
-    .logo {
-        
-    }
     
     nav {
-        height: 7vh;
+        height: 50px;
         background: #131417;
 
     }
@@ -714,16 +711,18 @@ a img {
         font-size: 5vw;
     }
 
+    .project p, .pepe, .highlight p  {
+        width: 100%;
 
+    }
     .project img {
         display: block;
     }
-    .pepe {
-        width: 100%;
+     
+    .project p {
+        font-size: 3.4vw;
     }
 
-    .highlight p {
-        width: 100%;
-    }
+    
 }
 
