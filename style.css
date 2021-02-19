@@ -335,27 +335,26 @@ nav ul li:hover::before {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out; */
 }
+
 .project-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 20%;
 }
 
 .project-expand {
-    position: relative;
-    bottom: 10px;
-  
-  
+    position: relative;  
     background-color: transparent;
     border: 1px solid rgb(109, 107, 107);
     color: rgb(133, 132, 132);
-    font-size: 1.5vw;
-    width: 5vw;
-    height: 3vw;
+    width: 60%;
+    margin: auto;
 }
 .project-expand a {
-    font-size: 1vw;
+    font-size: 0.55rem;
+    vertical-align: middle;
 }
 
 
@@ -608,7 +607,7 @@ a img {
         overflow: hidden;
         position: absolute;
         flex-direction: column;
-        top: 7vh;
+        top: 50px;
         height: 30vh;
         width: 100%;
         /* background: rgb(39, 39, 39); */
