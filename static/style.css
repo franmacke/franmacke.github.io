@@ -88,8 +88,8 @@ a {
 .bg-img {
     /* background: url("/img/Grupo\ de\ desplazamiento\ 1.svg"); */
     /* background: url("/img/Grupo\ de\ desplazamiento\ 1.png"); */
-    min-height: 100vh;
-    height: fit-content;
+    height: 100vh;
+    /* height: fit-content; */
     position: absolute;
     width: 50vw;
     top: 0;
@@ -101,8 +101,16 @@ a {
     
 }
 
-.image {
+.image1, .image2 {
     width: 100%;
+}
+
+.image1{
+    height: 100vh;
+}
+
+.image2 {
+    display: none;
 }
 
 main {
@@ -171,7 +179,7 @@ main {
     }
 
     .bg-img {
-        top: 350px;
+        top: 550px;
     }
 }
 
@@ -194,9 +202,21 @@ main {
 
     .bg-img {
         display: block;
-        top: 50vh;
-        height: fit-content;
-        width: 400px;
+        top: 40vh;
+        /* height: fit-content; */
+        width: 70vw;
+    }
+
+    .image1 {
+        display: none;
+    }
+     
+    .image2 {
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 50vh;
+        right: 0;
     }
 
     main {
@@ -235,6 +255,8 @@ main {
         border-radius: 3px;
         margin: 3px;
     }
+
+    
 }
 
 
