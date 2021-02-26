@@ -196,6 +196,7 @@ a {
     flex-direction: row;
     margin-top: 7vh;
     justify-content: center;
+    align-items: center;
 }
 
 .inbox a {
@@ -304,6 +305,12 @@ a {
         margin: 3px;
     }
 
+    .inbox a {
+        margin: 0;
+    }
+    .inbox p {
+        display: none;
+    }
     
 }
 
@@ -323,6 +330,10 @@ a {
     .landing-img {
         width: 95vw;
     }
+    .inbox img {
+        width: 40px;
+    }
+
 }
 
 
