@@ -123,6 +123,18 @@ main {
     height: 100vh;
 }
 
+.summary, .projects, .contact {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: fit-content;
+}
+
+.title {
+    padding-left: 10vw;
+}
+
 .desc {
     width: 100%;
     display: flex;
@@ -137,6 +149,8 @@ main {
     width: 70%;
     font-weight: 200;
     margin: 1vh 0;
+    text-align: center;
+    
 }
 .word1, .word2 {
     font-weight: bold;
@@ -157,12 +171,36 @@ main {
     
 }
 
-.summary {
-    width: 50%;
-    text-align: center;
+a {
+    padding: auto;
+}
+.language {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+}
+
+.card {
+    background-color: rgb(226, 224, 221);
+    height: 100px;
+    border-radius: 15px;
+
+
 }
 
 
+.inbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7vh;
+    justify-content: center;
+}
+
+.inbox a {
+    margin: 0 30px;
+}
 /* ANIMATIONS  */
 
 
@@ -175,9 +213,13 @@ main {
 @media screen and (orientation: landscape) and (max-width: 1024px) {
     main {
         margin-top: 80px;
+    }
+    
+    .desc {
+
         height: fit-content;
     }
-
+   
     .bg-img {
         top: 550px;
     }
@@ -223,11 +265,17 @@ main {
         flex-direction: column;
     }
 
-    .summary {
+    .summary, .projects, .contact {
         width: 100%;
         text-align: center;
+        flex-direction: column;
+
     }
 
+    .inbox {
+        width: 100%;
+        justify-content: space-evenly ;
+    }
     .landing-img {
         width: 400px;
     }
@@ -269,7 +317,7 @@ main {
     .word1, .word2 {
         font-size: 2rem;
     }
-    .desc p {
+    .text {
         font-size: 13px;
     }
     .landing-img {
@@ -278,7 +326,7 @@ main {
 }
 
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 440px) {
     main {
         margin-top: 70px;
         height: fit-content;
