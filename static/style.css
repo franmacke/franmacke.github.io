@@ -202,6 +202,16 @@ a {
 .inbox a {
     margin: 0 30px;
 }
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social img {
+    
+}
 /* ANIMATIONS  */
 
 
