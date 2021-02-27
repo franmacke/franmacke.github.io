@@ -8,9 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', (winX, winY) => {
         winX = innerWidth;
         winY = innerHeight;
-        
-        console.log (`Resized screen size:  ${winX}, ${winY}`);
     })
 
+    if (winX <= 768) {
+        const navButton = document.querySelector(".nav-burguer");
+        const navLinks = document.querySelector(".nav-links");
+
+        navButton.addEventListener('click', () => {
+            navLinks.classList.toggle('toggle');
+        })
+
+    } 
 
 });
